@@ -1,5 +1,7 @@
+module.exports = function (app) {
+
 const crudTiendas = (app) => {
-    const Tienda = require('../models/tiendas.js');
+    var Tienda = require('../models/tiendas.js');
 
     //Funciones de endpoints
     //GET - Devuelve todas las tiendas;
@@ -11,11 +13,9 @@ const crudTiendas = (app) => {
             } else {
                 console.log('ERROR: ' + err);
             }
-        })
-    }
-}
+        });
+    };
 
-module.exports = crudTiendas;
 
 // POST - insert a new registrer in the DB;
 
@@ -24,7 +24,7 @@ addTienda = function (req, res) {
     console.log('POST');
     console.log(req.body);
 
-    var tienda = new Pelicula({
+    var tienda = new Tienda({
         id: req.body.id,
         lat: req.body.lat,
         lng: req.body.lng,
@@ -98,6 +98,10 @@ deleteTienda = function (req, res) {
 
 //Rutas de la API, asociadas a una función;
 app.get('/tiendas', findAllTiendas);
-app.post('/tiendas', addPelicula);
+app.post('/tiendas', addTienda);
 app.put('/tiendas/:id', modificarTiendas);
 app.delete('/tiendas/:id', deleteTienda);
+
+}
+
+}
