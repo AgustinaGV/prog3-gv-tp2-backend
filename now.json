@@ -8,10 +8,31 @@
     ],
     "routes": [
         {
+            "src": "/tienda/(?<id>[^/]+)",
+            "dest": "/app.js/?id=$id",
+            "methods": [
+                "DELETE"
+            ]
+        },
+        {
+            "src":"/tienda/(?<id>[^/]+)",
+            "dest":"/app.js/?id=$id",
+            "methods":[
+                "PUT"
+            ]
+        },
+        {
             "src": "/tiendas",
             "dest": "/app.js",
             "methods": [
                 "GET"
+            ]
+        },
+        {
+            "src": "/tiendas",
+            "dest": "/app.js",
+            "methods": [
+                "POST"
             ]
         },
         {
