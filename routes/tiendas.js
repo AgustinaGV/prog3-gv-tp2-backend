@@ -17,8 +17,7 @@ const crudTiendas = (app) => {
     addTienda = function (req, res) {
         console.log('POST');
         console.log(req.body);
-        var tienda = new Tiendas({
-            id: req.body.id,
+        var tienda = new Tienda({
             lat: req.body.lat,
             lng: req.body.lng,
             name: req.body.name,
