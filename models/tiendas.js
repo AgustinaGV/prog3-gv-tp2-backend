@@ -15,4 +15,4 @@ var tiendasSchema = new Schema({
     redes:{type: String}
 });
 
-module.exports = mongoose.model('Tienda', tiendasSchema, 'tiendas' );
+module.exports = mongoose.model('Tienda', tiendasSchema, 'tiendas');

@@ -48,11 +48,14 @@ const crudTiendas = (app) => {
             tienda.lat = req.body.lat;
             tienda.lng = req.body.lng;
             tienda.name = req.body.name;
-            tienda.description = req.body.description;
-            tienda.address = req.body.address;
-            tienda.category = req.body.category;
-            tienda.horarios = req.body.horarios;
+            tienda.veg = req.body.veg;
             tienda.type = req.body.type;
+            tienda.description = req.body.description;
+            tienda.number = req.body.number;
+            tienda.horarioAtencion = req.body.horarioAtencion;
+            tienda.delivery = req.body.delivery;
+            tienda.redes = req.body.redes;
+            
 
             tienda.save(function (err) {
                 if (!err) {
