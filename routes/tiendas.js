@@ -38,7 +38,8 @@ const crudTiendas = (app) => {
             }
         });
 
-        res.send(Tienda);
+        // valor que obtuvo al hacer el save;
+        res.send(tienda);
     };
 
     //PUT - Update a register that already exists in the DB
